@@ -1,0 +1,294 @@
+.head {
+  height: 100px;
+  background-color: darkgrey;
+}
+
+.head h1 {
+  display: inline-block;
+  height: 100%;
+  line-height: 100px;
+  font-size: 18px;
+  margin: 0 16px;
+}
+
+.foot {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: darkgrey;
+}
+
+.body {
+  width: 375px;
+  display: flex;
+  height: 270px;
+  background-color: rgb(255, 223, 162);
+  transform-origin: left top;
+}
+
+.body .bodyLeft {
+  display: flex;
+  width: 220px;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.body .bodyLeft .kitBox {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border: 2px solid rgb(253, 152, 0);
+  margin-bottom: 8px;
+  margin-left: 8px;
+  position: relative;
+  line-height: 50px;
+}
+
+.body .bodyLeft .kitBox span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: normal;
+}
+
+.body .bodyRight {
+  box-sizing: border-box;
+  width: 139px;
+  height: calc(100% - 16px);
+  margin: 8px;
+  background-color: rgb(255, 223, 190);
+  border: 1px solid rgb(253, 152, 0);
+}
+
+.body .bodyRight h1 {
+  display: inline-block;
+}
+
+.body .bodyRight h1:nth-child(2) {
+  float: right;
+}
+
+.body .bodyRight .rTop,
+.body .bodyRight .rBottom {
+  width: 100%;
+  height: 146px;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+}
+
+.body .bodyRight .rTop {
+  height: 106px;
+  border-bottom: 1px solid rgb(253, 152, 0);
+}
+
+.body .bodyRight .rBottom span {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.activity {
+  position: absolute;
+  width: 375px;
+  bottom: 20px;
+  height: 240px;
+  text-align: center;
+  background: wheat;
+  transform-origin: left bottom;
+}
+.activity .openBox {
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: darkblue;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-60px, 0);
+  border-radius: 8px;
+}
+
+.activity .activity_left,
+.activity .activity_right {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  position: absolute;
+  /* bottom: 30px; */
+  width: 76px;
+  height: 240px;
+  /* display: flex; */
+  background-color: #e8d3cc;
+}
+
+.activity .activity_right {
+  right: 0;
+}
+
+.activity .activity_bgBox {
+  width: 60px;
+  height: 60px;
+  background: deepskyblue;
+  border-radius: 4px;
+}
+
+.boxCount {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.shadeBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.3;
+}
+
+.updateBox {
+  position: fixed;
+  padding: 8px;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  z-index: 9999;
+  background-color: burlywood;
+}
+
+.currentKitBox,
+.newKitBox {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+}
+
+.kitBoxTitle {
+  width: 66px;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-33px);
+  font-size: 14px;
+  font-weight: bold;
+  top: -12px;
+  z-index: 99;
+  background: #cdd0d7;
+  border: 1px solid white;
+}
+
+.kitBoxLeft {
+  width: 100px;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.kitBoxLeft p {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  width: calc(100% - 16px);
+  margin: 0;
+}
+
+.kitBoxRight {
+  width: calc(100% - 100px - 16px);
+  padding: 8px;
+  height: calc(100% - 16px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.kitBoxRight div {
+  width: 120px;
+  margin-bottom: 2px;
+}
+
+.kitBoxRight p {
+  margin: 0;
+  height: 60px;
+  font-size: 16px;
+
+  line-height: 60px;
+  text-align: center;
+}
+
+.newKitBox {
+  margin-top: -1px;
+}
+
+.kitBoxAttri {
+  display: flex;
+  height: 19px;
+  justify-content: space-between;
+}
+
+.kitBoxAttri span {
+  margin-right: 8px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  font-weight: bold;
+  top: -40px;
+  border: 1px solid white;
+}
+
+.handle {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sell,
+.fit {
+  font-size: 18px;
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid darkorange;
+  background-color: azure;
+  border-radius: 8px;
+}
+
+.head {
+  position: relative;
+}
+
+.head .buyBox {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: coral;
+}
